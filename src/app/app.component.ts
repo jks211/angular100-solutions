@@ -1,9 +1,4 @@
-import {
-  Component,
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  OnInit
-} from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 import { Album } from "./albums/album.model";
 
@@ -11,19 +6,23 @@ import { Album } from "./albums/album.model";
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
-  // Un-comment to prevent UI from updating
-  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   title = "My Angular Albums";
   albumsArray: Album[];
   numbers: number[] = [1, 2, 3];
 
-  titleCounter = 1;
-
-  constructor() {}
-
   ngOnInit(): void {
+    
+    const interval = setInterval(() => {
+      this.numbers.push(4); 
+      console.log(this.numbers);
+      this.numbers = [...this.numbers];
+      this.albumsArray[0].price += 10;
+    }, 2000);
+
+    setTimeout(() => clearInterval(interval), 6000);
+
     this.albumsArray = [
       {
         id: 1,
