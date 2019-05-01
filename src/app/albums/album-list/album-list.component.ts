@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 
 import { AlbumService } from "../shared/album.service"
 import { Album } from "../album.model";
+import { Observable } from 'rxjs';
 
 @Component({
   selector: "app-album-list",
@@ -9,7 +10,7 @@ import { Album } from "../album.model";
   styleUrls: ["./album-list.component.css"]
 })
 export class AlbumListComponent implements OnInit {
-  albumsArray: Album[];
+  albumsArray: Observable<Album[]>;
 
   constructor(private albumService: AlbumService) { }
 
