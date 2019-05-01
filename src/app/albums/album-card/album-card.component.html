@@ -1,4 +1,4 @@
-<div class="card">
+<!-- <div class="card">
   <img
     class="card-img-top cover"
     src="assets/img/{{ album.id }}.jpg"
@@ -18,6 +18,39 @@
       *ngIf="album.on_sale"
       src="assets/img/sale.png"
       style="width:40px;height:40px;"
+    />
+    <button class="btn btn-primary float-right" (click)="showAlbum()">
+      Raise Alert
+    </button>
+  </div>
+</div> -->
+
+<!-- /**************** Original above*******************/ -->
+
+<div class="card">
+  <div class="inner">
+    <img
+    class="card-img-top cover"
+    src="assets/img/{{ album.id }}.jpg"
+    alt="{{ album.album_name }}"
+    style="border: 1px solid grey"
+    />
+  </div>
+  <div class="card-body">
+    <h4 class="card-title">{{ album.artist }}</h4>
+    <div class="scrollable">
+      <ul style="list-style: none;">
+        <li>{{ album.album_name }}</li>
+        <li>Released: {{ album.year }}</li>
+        <li>{{ album.price }} {{ album.currency }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card-footer">
+    <img
+    *ngIf="album.on_sale"
+    src="assets/img/sale.png"
+    style="width:40px;height:40px;"
     />
     <button class="btn btn-primary float-right" (click)="showAlbum()">
       Raise Alert
