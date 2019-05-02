@@ -2,7 +2,6 @@ import { Component, OnInit } from "@angular/core";
 
 import { AlbumService } from "../shared/album.service"
 import { Album } from "../album.model";
-import { Observable } from 'rxjs';
 
 @Component({
   selector: "app-album-list",
@@ -10,7 +9,7 @@ import { Observable } from 'rxjs';
   styleUrls: ["./album-list.component.css"]
 })
 export class AlbumListComponent implements OnInit {
-  albumsArray: Observable<Album[]>;
+  albumsArray: Album[];
 
   constructor(private albumService: AlbumService) { }
 
@@ -21,8 +20,11 @@ export class AlbumListComponent implements OnInit {
   parentFunctionHandler(album) {
     alert('Album ' + album.album_name + ' was sent from the album card component');
   }
-  
+
   getAlbums() {
-    this.albumsArray = this.albumService.getAlbums();
+    this.albumService.getAlbums()
+    .subscribe(
+        albums => this.albumsArray = albums,
+        error => console.log("Error: ", error));
   }
 }
