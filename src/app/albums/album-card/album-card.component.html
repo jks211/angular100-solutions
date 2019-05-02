@@ -39,11 +39,9 @@
   <div class="card-body">
     <h4 class="card-title">{{ album.artist }}</h4>
     <div class="scrollable">
-      <ul style="list-style: none;">
-        <li>{{ album.album_name }}</li>
-        <li>Released: {{ album.year }}</li>
-        <li>{{ album.price }} {{ album.currency }}</li>
-      </ul>
+      <h5 class="card-title">{{ album.album_name }}</h5>
+      <h5 class="card-text">Released: {{ album.release_date }}</h5>
+      <h5>{{ album.price }} {{ album.currency }}</h5>
     </div>
   </div>
   <div class="card-footer">
