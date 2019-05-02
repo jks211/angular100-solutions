@@ -1,10 +1,12 @@
 <div class="card">
-  <img
-    class="card-img-top cover"
-    src="assets/img/{{ album.id }}.jpg"
-    alt="{{ album.albumName }}"
-    style="border: 1px solid grey"
-  />
+  <div class="inner">
+    <img
+      class="card-img-top cover"
+      src="assets/img/{{ album.id }}.jpg"
+      alt="{{ album.albumName }}"
+      style="border: 1px solid grey"
+    />
+  </div>
   <div class="card-body">
     <h5 class="card-title">{{ album.artist }}</h5>
     <div class="scrollable">
