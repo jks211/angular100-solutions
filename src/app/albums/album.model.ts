@@ -1,14 +1,14 @@
 export interface Album {
   id: number;
   artist: string;
-  album_name: string;
+  albumName: string;
   genre: string;
   price: number;
   currency?: string;
-  on_sale: boolean;
+  onSale: boolean;
   year: number;
-  release_date: string;
-  recording_location: string;
+  releaseDate: string;
+  recordingLocation: string;
   duration: string;
-  URL: string;
+  url: string;
 }
