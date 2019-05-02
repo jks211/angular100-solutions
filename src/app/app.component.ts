@@ -1,7 +1,5 @@
 import { Component } from "@angular/core";
 
-import { Album } from "./albums/album.model";
-
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -9,6 +7,4 @@ import { Album } from "./albums/album.model";
 })
 export class AppComponent {
   title = "My Angular Albums";
-
-  constructor() {}
 }
