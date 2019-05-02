@@ -11,7 +11,7 @@ export class AlbumCardComponent implements OnInit {
   album: Album;
 
   showAlbum() {
-    alert("Album selected: " + this.album.album_name);
+    alert("Album selected: " + this.album.albumName);
   }
 
   constructor() {}
