@@ -11,12 +11,12 @@ export class AlbumListComponent implements OnInit {
   albumsArray: Album[];
 
   ngOnInit(): void {
-    this.albumsArray = this.albumsArray = ALBUMS;
+    this.albumsArray = ALBUMS;
   }
 
   parentFunctionHandler(album) {
     alert(
-      "Album " + album.album_name + " was sent from the album card component"
+      "Album " + album.albumName + " was sent from the album card component"
     );
   }
 }
