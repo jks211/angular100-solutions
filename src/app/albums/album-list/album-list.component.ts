@@ -1,28 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
-import { Album } from '../album.model';
-import { ALBUMS } from '../albums.data';
+import { Album } from "../album.model";
+import { ALBUMS } from "../albums.data";
 
 @Component({
-  selector: 'app-album-list',
-  templateUrl: './album-list.component.html',
-  styleUrls: ['./album-list.component.css']
+  selector: "app-album-list",
+  templateUrl: "./album-list.component.html",
+  styleUrls: ["./album-list.component.css"]
 })
 export class AlbumListComponent implements OnInit {
-  albums: Album[];
-  selectedAlbum: Album = null;
+  albumsArray: Album[];
 
-  constructor() { }
-
-  // Method will allow select and deselect
-  getSelectedAlbum(album: Album) {
-    if (this.selectedAlbum == album)
-        this.selectedAlbum = null;
-    else
-        this.selectedAlbum = album;
+  ngOnInit(): void {
+    this.albumsArray = ALBUMS;
   }
 
-  ngOnInit() {
-    this.albums = ALBUMS;
+  parentFunctionHandler(album) {
+    alert(
+      "Album " + album.albumName + " was sent from the album card component"
+    );
   }
 }
