@@ -17,8 +17,8 @@ export class AlbumListComponent implements OnInit {
     this.getAlbums();
    }
 
-  parentFunctionHandler(album) {
-    alert('Album ' + album.album_name + ' was sent from the album card component');
+   parentFunctionHandler(album) {
+    alert('Album ' + album.albumName + ' was sent from the album card component');
   }
 
   getAlbums() {
