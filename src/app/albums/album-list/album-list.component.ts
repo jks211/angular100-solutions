@@ -19,7 +19,7 @@ export class AlbumListComponent implements OnInit {
    }
 
   parentFunctionHandler(album) {
-    alert('Album ' + album.album_name + ' was sent from the album card component');
+    alert('Album ' + album.albumName + ' was sent from the album card component');
   }
   
   getAlbums() {
