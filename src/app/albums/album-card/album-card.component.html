@@ -1,11 +1,7 @@
 <div class="card">
   <div class="inner">
-    <img
-      class="card-img-top cover"
-      src="assets/img/{{ album.id }}.jpg"
-      alt="{{ album.albumName }}"
-      style="border: 1px solid grey"
-    />
+    <img class="card-img-top cover" src="assets/img/{{ album.id }}.jpg" alt="{{ album.albumName }}"
+      style="border: 1px solid grey" />
   </div>
   <div class="card-body">
     <h5 class="card-title">{{ album.artist }}</h5>
@@ -17,7 +13,7 @@
   </div>
   <div class="card-footer">
     <button class="btn btn-primary float-right" (click)="showAlbum()">
-      Raise Alert
+      View Details
     </button>
   </div>
 </div>
