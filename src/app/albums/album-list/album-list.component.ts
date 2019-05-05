@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 
-import { AlbumService } from "../shared/album.service"
+import { AlbumService } from "../shared/album.service";
 import { Album } from "../album.model";
 
 @Component({
@@ -15,12 +15,12 @@ export class AlbumListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAlbums();
-   }
+  }
 
   parentFunctionHandler(album) {
     alert('Album ' + album.albumName + ' was sent from the album card component');
   }
-  
+
   getAlbums() {
     this.albumsArray = this.albumService.getAlbums();
   }
