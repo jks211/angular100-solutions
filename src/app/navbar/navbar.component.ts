@@ -8,7 +8,7 @@ import { Component, OnInit } from "@angular/core";
 export class NavbarComponent implements OnInit {
   title = "My Albums Project";
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }
