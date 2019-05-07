@@ -4,7 +4,7 @@ import { AlbumListComponent } from "./albums/album-list/album-list.component";
 import { AboutComponent } from "./about/about.component";
 import { NotfoundComponent } from "./notfound/notfound.component";
 import { AlbumDetailsComponent } from "./albums/album-details/album-details.component";
-import { AddAlbumComponent } from "./albums/add-album/add-album.component";
+import { AddAlbumComponent } from './albums/add-album/add-album.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/about", pathMatch: "full" },

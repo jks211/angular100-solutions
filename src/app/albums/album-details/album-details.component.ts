@@ -26,11 +26,6 @@ export class AlbumDetailsComponent implements OnInit {
       error => console.log("Error: ", error)
     );
 
-    // this.albumService.getAlbumById(id).subscribe(
-    //   album => {
-    //     this.album = album;
-    //   },
-    //   error => console.log("Error: ", error)
-    // );
+
   }
 }
