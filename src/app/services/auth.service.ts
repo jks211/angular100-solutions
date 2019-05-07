@@ -41,10 +41,6 @@ export class AuthService {
       }),
       catchError(this.handleError)
     );
-
-
-
-
   }
 
   logout(): Observable<boolean> {
