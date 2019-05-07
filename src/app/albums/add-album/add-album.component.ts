@@ -23,20 +23,20 @@ export class AddAlbumComponent implements OnInit {
     this.album = {
       id: null,
       artist: "",
-      album_name: "",
+      albumName: "",
       genre: "",
       price: 0,
       currency: "",
-      on_sale: false,
+      onSale: false,
       year: 1900,
-      release_date: "",
-      recording_location: "",
+      releaseDate: "",
+      recordingLocation: "",
       duration: "",
       url: "",
       tracks: [
         {
           id: 1,
-          track_number: 1,
+          trackNumber: 1,
           title: "Sample Track",
           length: "4:06"
         }
