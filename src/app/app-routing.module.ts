@@ -10,8 +10,6 @@ const routes: Routes = [
   { path: "", redirectTo: "/about", pathMatch: "full" },
   { path: "about", component: AboutComponent },
   { path: "albums", component: AlbumListComponent },
-  { path: "add-albums", component: AddAlbumComponent },
-  { path: "login", component: LoginComponent },
   { path: "**", component: NotfoundComponent, pathMatch: "full" }
 ];
 
