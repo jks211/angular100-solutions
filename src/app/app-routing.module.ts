@@ -3,8 +3,6 @@ import { Routes, RouterModule } from "@angular/router";
 import { AlbumListComponent } from "./albums/album-list/album-list.component";
 import { AboutComponent } from "./about/about.component";
 import { NotfoundComponent } from "./notfound/notfound.component";
-import { AddAlbumComponent } from './albums/add-album.component';
-import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/about", pathMatch: "full" },
