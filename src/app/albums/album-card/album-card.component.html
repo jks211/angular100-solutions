@@ -1,6 +1,6 @@
 <div 
   class="card"
-  [ngStyle]="{ 'background-color': album.onSale ? 'green' : '' }"
+  
 >
   <div class="inner">
     <img
@@ -10,7 +10,7 @@
       style="border: 1px solid grey"
     />
   </div>
-  <div class="card-body">
+  <div class="card-body" [ngStyle]="{ 'background-color': album.onSale ? '#93df93' : '' }">
     <h5 class="card-title">{{ album.artist }}</h5>
     <div class="scrollable">
       <h6 class="card-title">{{ album.albumName }}</h6>
@@ -31,7 +31,7 @@
     style="width:40px;height:40px;"
     />
     <button class="btn btn-primary float-right" (click)="showAlbum()">
-      Raise Alert
+      View Details
     </button>
   </div>
 </div>
