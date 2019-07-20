@@ -37,7 +37,7 @@ img {
 }
 
 /* 3 below selectors make album images zoom in when cursor hover */
-.inner {
+.card:hover .inner{
   overflow: hidden; /*this will hide overflow, so image doesnt show outside of the card as it grows */
 }
 
