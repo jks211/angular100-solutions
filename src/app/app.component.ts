@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
           id: 1,
           artist: "Tremonti",
           albumName: "Dust",
-          onSale: true,
+          isOnSale: true,
           price: 11.99,
           currency: "USD",
           year: 2016,
