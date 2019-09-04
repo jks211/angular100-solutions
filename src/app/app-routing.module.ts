@@ -7,7 +7,21 @@ import { NotfoundComponent } from "./notfound/notfound.component";
 const routes: Routes = [
   { path: "", redirectTo: "/about", pathMatch: "full" },
   { path: "about", component: AboutComponent },
-  { path: "albums", component: AlbumListComponent },
+ // { path: "albums", component: AlbumListComponent },
+
+  {
+    path: "albums", //Angular 8 Notation with Promise
+    loadChildren: () => import('./albums/albums.module')
+                        .then(mod => {
+                          console.log('in promise loadChildren');
+                          return mod.AlbumsModule;
+                        }),
+  },
+  // //Before Angular 8
+  // { path: "observables", loadChildren: './observables/observables.module#ObservablesModule' },
+
+
+
   { path: "**", component: NotfoundComponent, pathMatch: "full" }
 ];
 
