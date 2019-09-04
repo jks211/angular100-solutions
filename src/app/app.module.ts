@@ -19,7 +19,9 @@ import { AlbumsModule } from './albums/albums.module';
     NavbarComponent,
     NotfoundComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, AlbumsModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule,
+    AlbumsModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
