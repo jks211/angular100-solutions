@@ -10,19 +10,16 @@ import { AlbumService } from "./albums/shared/album.service";
 import { AboutComponent } from "./about/about.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { NotfoundComponent } from './notfound/notfound.component';
-import { AddAlbumComponent } from './albums/add-album/add-album.component';
+import { AlbumsModule } from './albums/albums.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlbumListComponent,
-    AlbumCardComponent,
     AboutComponent,
     NavbarComponent,
     NotfoundComponent,
-    AddAlbumComponent
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, AlbumsModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
