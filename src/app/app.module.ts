@@ -11,6 +11,7 @@ import { AboutComponent } from "./about/about.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AddAlbumComponent } from './albums/add-album/add-album.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AddAlbumComponent } from './albums/add-album/add-album.component';
     AboutComponent,
     NavbarComponent,
     NotfoundComponent,
-    AddAlbumComponent
+    AddAlbumComponent,
+    WelcomeComponent
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   bootstrap: [AppComponent]

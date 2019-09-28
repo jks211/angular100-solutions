@@ -3,14 +3,11 @@ import { Component, OnInit } from "@angular/core";
 @Component({
   selector: "app-about",
   template: `
-    <>This app is written in ANgular and displays albums</p>
+    <div><p>This app is written in Angular and displays music albums</p></div>
   `,
-  styles: []
+  styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
   title = "My Angular Albums";
 
-  constructor() { }
-
-  ngOnInit() { }
 }
