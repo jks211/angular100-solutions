@@ -6,6 +6,7 @@ import { NotfoundComponent } from "./notfound/notfound.component";
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AlbumDetailsComponent } from './albums/album-details/album-details.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   { path: "", redirectTo: "/welcome", pathMatch: "full" },
@@ -31,6 +32,7 @@ const routes: Routes = [
   // { path: "albums", component: AlbumListComponent },
   {
     path: "albums", //Angular 8 Notation with Promise
+    canActivate: [AuthGuard],
     loadChildren: () => import('./albums/albums.module')
       .then(mod => {
         console.log('in promise loadChildren');
