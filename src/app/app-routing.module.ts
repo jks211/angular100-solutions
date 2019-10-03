@@ -5,9 +5,12 @@ import { AboutComponent } from "./about/about.component";
 import { NotfoundComponent } from "./notfound/notfound.component";
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AlbumDetailsComponent } from './albums/album-details/album-details.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/welcome", pathMatch: "full" },
+  { path: "login", component: LoginComponent },
+
   { path: "welcome", component: WelcomeComponent },
   //  { path: "about", component: AboutComponent },
 
