@@ -9,7 +9,6 @@ const routes: Routes = [
   { path: "", redirectTo: "/welcome", pathMatch: "full" },
   { path: "welcome", component: WelcomeComponent },
   { path: "about", component: AboutComponent },
-  
   { path: "albums", component: AlbumListComponent },
   { path: "**", component: NotfoundComponent, pathMatch: "full" }
 ];
