@@ -12,10 +12,10 @@ const routes: Routes = [
 
   {
     path: "about",
-    loadChildren: () => import('./albums/albums.module')
+    loadChildren: () => import('./about/about.module')
       .then(mod => {
         console.log('in promise loadChildren');
-        return mod.AlbumsModule;
+        return mod.AboutModule;
       })
   },
 
