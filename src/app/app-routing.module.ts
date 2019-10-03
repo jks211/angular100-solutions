@@ -8,15 +8,30 @@ import { WelcomeComponent } from './welcome/welcome.component';
 const routes: Routes = [
   { path: "", redirectTo: "/welcome", pathMatch: "full" },
   { path: "welcome", component: WelcomeComponent },
-  { path: "about", component: AboutComponent },
+  //  { path: "about", component: AboutComponent },
+
+  {
+    path: "about",
+    loadChildren: () => import('./albums/albums.module')
+      .then(mod => {
+        console.log('in promise loadChildren');
+        return mod.AlbumsModule;
+      })
+  },
+
+  // Before Angular 8
+  // { path: "about", loadChildren: './about/about.module#AboutModule' },
+
+
+
   // { path: "albums", component: AlbumListComponent },
   {
     path: "albums", //Angular 8 Notation with Promise
     loadChildren: () => import('./albums/albums.module')
-                        .then(mod => {
-                          console.log('in promise loadChildren');
-                          return mod.AlbumsModule;
-                        }),
+      .then(mod => {
+        console.log('in promise loadChildren');
+        return mod.AlbumsModule;
+      }),
   },
   // //Before Angular 8
   // { path: "observables", loadChildren: './observables/observables.module#ObservablesModule' },
