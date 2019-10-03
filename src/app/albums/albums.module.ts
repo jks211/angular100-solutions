@@ -7,13 +7,15 @@ import { AlbumsRoutingModule } from './albums-routing.module';
 import { AlbumDetailsComponent } from './album-details/album-details.component';
 import { RouterModule } from '@angular/router';
 import { AlbumEditComponent } from './album-edit/album-edit.component';
+import { AddAlbumComponent } from './add-album/add-album.component';
 
 
 @NgModule({
   declarations: [ AlbumListComponent,
     AlbumCardComponent,
     AlbumDetailsComponent,
-    AlbumEditComponent],
+    AlbumEditComponent,
+    AddAlbumComponent],
   imports: [
     CommonModule, AlbumsRoutingModule
     , RouterModule

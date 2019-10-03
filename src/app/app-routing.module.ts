@@ -7,14 +7,15 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AlbumDetailsComponent } from './albums/album-details/album-details.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth/auth.guard';
+import { AddAlbumComponent } from './albums/add-album/add-album.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/welcome", pathMatch: "full" },
   { path: "login", component: LoginComponent },
-
   { path: "welcome", component: WelcomeComponent },
-  //  { path: "about", component: AboutComponent },
-
+  { path: "add-album",
+    component: AddAlbumComponent,
+    canActivate: [AuthGuard] },
   {
     path: "about",
     loadChildren: () => import('./about/about.module')
@@ -26,8 +27,6 @@ const routes: Routes = [
 
   // Before Angular 8
   // { path: "about", loadChildren: './about/about.module#AboutModule' },
-
-
 
   // { path: "albums", component: AlbumListComponent },
   {
