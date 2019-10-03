@@ -6,12 +6,14 @@ import { AlbumCardComponent } from "./album-card/album-card.component";
 import { AlbumsRoutingModule } from './albums-routing.module';
 import { AlbumDetailsComponent } from './album-details/album-details.component';
 import { RouterModule } from '@angular/router';
+import { AlbumEditComponent } from './album-edit/album-edit.component';
 
 
 @NgModule({
   declarations: [ AlbumListComponent,
     AlbumCardComponent,
-    AlbumDetailsComponent],
+    AlbumDetailsComponent,
+    AlbumEditComponent],
   imports: [
     CommonModule, AlbumsRoutingModule
     , RouterModule
