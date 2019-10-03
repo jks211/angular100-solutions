@@ -10,7 +10,7 @@ import { AlbumService } from "./albums/shared/album.service";
 import { AboutComponent } from "./about/about.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { NotfoundComponent } from './notfound/notfound.component';
-import { AddAlbumComponent } from './albums/add-album/add-album.component';
+// import { AddAlbumComponent } from './albums/add-album/add-album.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
@@ -21,7 +21,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     AboutComponent,
     NavbarComponent,
     NotfoundComponent,
-    AddAlbumComponent,
+    // AddAlbumComponent,
     WelcomeComponent
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
