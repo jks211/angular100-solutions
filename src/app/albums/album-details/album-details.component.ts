@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Album } from '../album.model';
+import { ActivatedRoute } from '@angular/router';
+import { AlbumService } from '../shared/album.service';
 
 @Component({
   selector: 'app-album-details',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlbumDetailsComponent implements OnInit {
 
-  constructor() { }
+    album: Album;
 
-  ngOnInit() {
+    constructor(
+      private route: ActivatedRoute,
+      private albumService: AlbumService
+    ) {}
+
+    ngOnInit() {
+      const id = +this.route.snapshot.paramMap.get("id");
+      this.albumService.getAlbumById(id).subscribe(
+        album => {
+          this.album = album;
+        },
+        error => console.log("Error: ", error)
+      );
+    }
+
   }
 
-}
+
