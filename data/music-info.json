@@ -1394,48 +1394,6 @@
           "length": "3:58"
         }
       ]
-    },
-    {
-      "artist": "asd",
-      "album_name": "asd",
-      "release_date": "asd",
-      "recording_location": "asd",
-      "genre": "asd",
-      "duration": "asd",
-      "url": "asd",
-      "price": 0,
-      "currency": "asd",
-      "on_sale": false,
-      "year": "d",
-      "id": 16
-    },
-    {
-      "artist": "asd",
-      "album_name": "asd",
-      "release_date": "asd",
-      "recording_location": "asd",
-      "genre": "asd",
-      "duration": "asd",
-      "url": "asd",
-      "price": 0,
-      "currency": "asd",
-      "on_sale": false,
-      "year": "d",
-      "id": 17
-    },
-    {
-      "artist": "asd",
-      "album_name": "asd",
-      "release_date": "asd",
-      "recording_location": "asd",
-      "genre": "asd",
-      "duration": "asd",
-      "url": "asd",
-      "price": 0,
-      "currency": "asd",
-      "on_sale": false,
-      "year": "d",
-      "id": 18
     }
   ]
 }
