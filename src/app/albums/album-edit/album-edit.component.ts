@@ -29,11 +29,9 @@ export class AlbumEditComponent implements OnInit {
 
   editAlbum(form: NgForm){
       console.log('in edit album calling service');      
-      this.service.updateAlbum(this.album)
-      this.router.navigate(['./albums'])
-      
+      this.service.updateAlbum(this.album).subscribe(
+        ()=>this.router.navigate(['./albums']),
+      )    
   }
-
-  
 
 }
