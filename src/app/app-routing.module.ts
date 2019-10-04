@@ -31,7 +31,7 @@ const routes: Routes = [
   //  { path: "albums", component: AlbumListComponent },
   {
     path: "albums", //Angular 8 Notation with Promise
-  //  canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
     loadChildren: () => import('./albums/albums.module')
       .then(mod => {
         console.log('in promise loadChildren');
