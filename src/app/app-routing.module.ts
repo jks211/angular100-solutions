@@ -28,7 +28,7 @@ const routes: Routes = [
   // Before Angular 8
   // { path: "about", loadChildren: './about/about.module#AboutModule' },
 
-  // { path: "albums", component: AlbumListComponent },
+  //  { path: "albums", component: AlbumListComponent },
   {
     path: "albums", //Angular 8 Notation with Promise
     canActivate: [AuthGuard],
@@ -38,6 +38,8 @@ const routes: Routes = [
         return mod.AlbumsModule;
       }),
   },
+
+  
   // //Before Angular 8
   // { path: "observables", loadChildren: './observables/observables.module#ObservablesModule' },
   { path: "**", component: NotfoundComponent, pathMatch: "full" }

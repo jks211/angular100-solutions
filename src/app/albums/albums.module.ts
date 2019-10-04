@@ -8,6 +8,7 @@ import { AlbumDetailsComponent } from './album-details/album-details.component';
 import { RouterModule } from '@angular/router';
 import { AlbumEditComponent } from './album-edit/album-edit.component';
 import { AddAlbumComponent } from './add-album/add-album.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,8 +18,11 @@ import { AddAlbumComponent } from './add-album/add-album.component';
     AlbumEditComponent,
     AddAlbumComponent],
   imports: [
-    CommonModule, AlbumsRoutingModule
+    CommonModule, 
+    FormsModule,
+    AlbumsRoutingModule
     , RouterModule
-  ]
+  ],
+  
 })
 export class AlbumsModule { }

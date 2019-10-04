@@ -22,7 +22,6 @@ import { LoginComponent } from './login/login.component';
   imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule,
     AlbumsModule, 
   ],
-  exports: [FormsModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
