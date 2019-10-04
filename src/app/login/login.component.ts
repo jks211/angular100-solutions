@@ -33,8 +33,6 @@ export class LoginComponent {
 
    submit({ value, valid }: { value: IUserLogin; valid: boolean }) {
 
-  //  submit() {
-
     console.log(this.loginForm)
     console.log(value)
     
@@ -50,41 +48,7 @@ export class LoginComponent {
       console.log('back from unsuccessful login')
       alert('Invalid login try again')
     }
-  //  this.authService.login(value);
-    
-    
-
-    // this.authService.login(value).subscribe(
-    //   (status: boolean) => {
-    //     if (status) {
-    //       alert("Logged in");
-    //       if (this.authService.redirectUrl) {
-    //         const redirectUrl = this.authService.redirectUrl;
-    //         this.authService.redirectUrl = "";
-    //         this.router.navigate([redirectUrl]);
-    //       } else {
-    //         this.router.navigate(["/albums"]);
-    //       }
-    //     } else {
-    //       const loginError = "Unable to login";
-    //       this.errorMessage = loginError;
-    //       console.log(loginError);
-    //     }
-    //   },
-    //   (err: any) => console.log(err)
-    // );
   }
-
-
-
-
-  // login() {
-  //   this.authService.login('user', 'root');
-  //   if (!this.authService.redirectUrl) {
-  //     this.authService.redirectUrl = '/welcome';
-  //   }
-  //   this.router.navigateByUrl(this.authService.redirectUrl);
-  // }
 
   logout() {
     this.authService.logout();
