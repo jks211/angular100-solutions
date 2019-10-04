@@ -7,6 +7,7 @@ import { AlbumsRoutingModule } from './albums-routing.module';
 import { AlbumDetailsComponent } from './album-details/album-details.component';
 import { RouterModule } from '@angular/router';
 import { AlbumEditComponent } from './album-edit/album-edit.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,7 @@ import { AlbumEditComponent } from './album-edit/album-edit.component';
     AlbumDetailsComponent,
     AlbumEditComponent],
   imports: [
-    CommonModule, AlbumsRoutingModule
+    CommonModule, FormsModule, AlbumsRoutingModule
     , RouterModule
   ]
 })

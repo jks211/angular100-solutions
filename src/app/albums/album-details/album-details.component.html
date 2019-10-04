@@ -46,7 +46,9 @@
   </div>
 
 
-  <button routerLink="edit" routerLinkActive="button-active" class="button">
+  <button [routerLink]="['edit']" 
+          [queryParams]="{albumToEdit:album | json}"
+          routerLinkActive="button-active" class="button">
       Edit Album Details
   </button>
   <router-outlet></router-outlet>
