@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../shared/authentication.service';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ValidationService } from '../shared/validation.service';
+import { IUserLogin } from '../shared/interfaces';
 
 @Component({
   selector: 'app-login',
@@ -9,20 +12,49 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-  constructor(private authService: AuthenticationService,
-              private router: Router) { }
+  constructor(private formBuilder: FormBuilder,
+    private authService: AuthenticationService,
+    private router: Router) { }
 
-  login() {
-    this.authService.login('user', 'root');
-    if (!this.authService.redirectUrl) {
-      this.authService.redirectUrl = '/welcome';
+
+  loginForm: FormGroup;
+  errorMessage: string;
+
+  ngOnInit() {
+    this.buildForm();
+  }
+
+  buildForm() {
+    this.loginForm = this.formBuilder.group({
+      email: ["", [Validators.required, ValidationService.emailValidator]],
+      password: ["", [Validators.required, ValidationService.passwordValidator]]
+    });
+  }
+
+   submit({ value, valid }: { value: IUserLogin; valid: boolean }) {
+
+    console.log(this.loginForm)
+    console.log(value)
+    
+    if(this.authService.login(value)) {
+      console.log('back from successful login')
+      if (!this.authService.redirectUrl) {
+        this.authService.redirectUrl = '/welcome';
+      }
+      this.router.navigateByUrl(this.authService.redirectUrl);
+  
     }
-    this.router.navigateByUrl(this.authService.redirectUrl);
+    else {
+      console.log('back from unsuccessful login')
+      alert('Invalid login try again')
+    }
   }
 
   logout() {
     this.authService.logout();
     this.authService.redirectUrl = '/login';
   }
+
+
 
 }

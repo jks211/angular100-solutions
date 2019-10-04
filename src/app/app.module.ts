@@ -14,6 +14,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AlbumsModule } from './albums/albums.module';
 import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { LoginComponent } from './login/login.component';
     WelcomeComponent,
     LoginComponent
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule,
+  imports: [BrowserModule, 
+    ReactiveFormsModule,
+    HttpClientModule, AppRoutingModule,
     AlbumsModule
   ],
   bootstrap: [AppComponent]
