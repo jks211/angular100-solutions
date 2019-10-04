@@ -19,9 +19,10 @@ import { LoginComponent } from './login/login.component';
     WelcomeComponent,
     LoginComponent
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule,
-    AlbumsModule, FormsModule
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule,
+    AlbumsModule, 
   ],
+  exports: [FormsModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
