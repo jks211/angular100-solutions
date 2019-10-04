@@ -17,16 +17,20 @@ export class AuthenticationService {
     this.isLoggedIn = (localStorage.getItem('loggedin')) ? true : false;
   }
 
-  login(username: string, password: string): Observable<boolean> {
-      if (username === 'user' && password === 'root') {
+  login({email, password}): boolean {
+
+    
+      if (email === 'test@test.com' && password === 'abcd1234') {
+        console.log('valid login');
           this.getLoggedInStatus.emit(true);
           this.isLoggedIn = true;
           localStorage.setItem('loggedin', 'true');
-          return of(true);
+          return true;
       } else {
+        console.log('invalid login');
           this.isLoggedIn = false;
           this.getLoggedInStatus.emit(false);
-          return of(false);
+          return false;
       }
   }
 

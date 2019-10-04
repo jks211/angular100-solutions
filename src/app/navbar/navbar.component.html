@@ -11,9 +11,7 @@
           <a class="nav-link" [routerLink]="['/welcome']" routerLinkActive="router-link-active">Home</a></li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/albums']" routerLinkActive="router-link-active">View Albums</a></li>
-        <li class="nav-item">
-          <a class="nav-item nav-link" routerLink="/add-album" routerLinkActive="active">Add Album</a></li>
-        
+       
           <li class="nav-item"><a class="nav-link" [routerLink]="['/about']"
             routerLinkActive="router-link-active">About</a></li>
         <li *ngIf="!loggedIn" class="nav-item">
